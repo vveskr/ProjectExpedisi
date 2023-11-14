@@ -15,7 +15,7 @@ public static void main(String[] args){
         {"Moh. Syifa'ul Faj Ismunir"}
     };
     int [][] password = {
-        {230403}, {}, {}
+        {230403}, {445566}, {778899}
     };
     int user = -1;
     String  pengirim, penerima, layanan, cari, kotaAsal, kotaTujuan;
@@ -246,7 +246,7 @@ public static void main(String[] args){
                 
                 case 2:
                 System.out.println("Data Ekspedisi:");
-                 for (int i = 0; i < l; i++) {
+                 for (int i = 1; i < l; i++) {
                     System.out.println("No Resi: " + dataEkspedisi[i][0]);
                     System.out.println("Pengirim: " + dataEkspedisi[i][1]);
                     System.out.println("No HP Pengirim: " + dataEkspedisi[i][2]);
