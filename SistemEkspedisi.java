@@ -15,19 +15,17 @@ public static void main(String[] args){
         {"Moh. Syifa'ul Faj Ismunir"}
     };
     int [][] password = {
-        {230403}, {445566}, {778899}
+        {112233}, {445566}, {778899}
     };
-    int user = -1;
-    String  pengirim, penerima, layanan, cari, kotaAsal, kotaTujuan;
+    String  pengirim, penerima, layanan, kotaAsal, kotaTujuan;
     int  jml=0, l=1, indeksKotaAsal, indeksKotaTujuan;
     String[] isi_barang = new String[50];
     char jawab;
     double biaya=0, totalBiaya=0.0;
     long no_hp, no_hp_penerima;
-    int maxPaket = 15;
-    int  index;
+    int maxPaket = 15, user = -1;
     double [] berat = new double [20];
-    Boolean kondisi = true;
+    Boolean kondisi = true, online = true;
     double pendapatanHarian = 0;
     double pendapatanBulanan = 0;
     int bulanIni = -1;
@@ -42,14 +40,16 @@ public static void main(String[] args){
       {8000 , 6000 , 6000 , 16000, 10000, 0    , 7000 },  // Tulungagung
       {10000, 8000 , 6000 , 15000, 10000, 7000 , 0    }   // Madiun
         };
-        System.out.println("---------------------------");
-        System.out.println("\tSELAMAT DATANG DI EKSPEDISI JLS FAST");
-        System.out.println("---------------------------");
+        System.out.println("---------------------------------");
+        System.out.println("\tSELAMAT DATANG DI ");
+        System.out.println("\tEKSPEDISI JLS FAST");
+        System.out.println("---------------------------------");
         do {
-            System.out.print("\nMasukkan User Name      : ");
+            System.out.print("\nMasukkan Username      : ");
             String inputNama = ekspedisi.nextLine();
-            System.out.print("Masukkan Password anda    : ");
+            System.out.print("Masukkan Password      : ");
             int inputPin = ekspedisi.nextInt();
+            ekspedisi.nextLine();
 
             for (int i = 0; i < akun.length; i++) {
                 if (inputNama.equals(akun[i][0]) && inputPin == password[i][0]) {
@@ -76,7 +76,7 @@ public static void main(String[] args){
             System.out.println("|   1. Buat Paket/Tambah Paket         |");
             System.out.println("|   2. Data Ekspedisi                  |");
             System.out.println("|   3. Lacak Pesanan                   |");
-            System.out.println("|   4. Riwayat layanan                 |");
+            System.out.println("|   4. Laporan Pendapatan              |");
             System.out.println("|   5. Keluar                          |");
             System.out.println("----------------------------------------");
             System.out.print("Pilih menu : ");
@@ -99,7 +99,7 @@ public static void main(String[] args){
                         System.out.println("Berikut adalah isi barang yang akan dipaketkan : ");
                         for (String barang : isi_barang){
                             if (barang != null){
-                            System.out.println(barang );
+                                System.out.println(barang );
                             }
                         }
                         System.out.println("Jumlah barang yang akan dikirimkan : " + jml);
@@ -280,7 +280,6 @@ public static void main(String[] args){
                         break;
                     }
                 }
-
                 if (!ditemukan) {
                     System.out.println("Nomor resi tidak ditemukan.");
                 }
@@ -312,7 +311,7 @@ public static void main(String[] args){
 
                 case 5:
                     kondisi=false;
-                     System.out.println("Terima kasih!");
+                     System.out.println("Terima kasih telah menggunakan layanan ekspedisi kami");
                     
                     
 
